@@ -52,7 +52,7 @@ AesCtrP.leadingZeros=function( x)
  * @example
  *   var encr = Aes.Ctr.encrypt('big secret', 'pāşšŵōřđ', 256); // encr: 'lwGl66VVwVObKIr6of8HVqJr'
  */
-AesCtrP.encrypt = function(plaintext, password, nBits,nonce ,sequence) {
+AesCtrP.encrypt = function(plaintext, password, nBits,sequence,nonce) {
 	 sequence=(sequence==null)?8:(64 - AesCtrP.leadingZeros(sequence));
     var blockSize = 16;  // block size fixed at 16 bytes / 128 bits (Nb=4) for AES
     if (!(nBits==128 || nBits==192 || nBits==256)) return ''; // standard allows 128/192/256 bit keys
