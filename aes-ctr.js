@@ -1,8 +1,8 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/*  AES Counter-mode implementation in JavaScript       (c) Lorenzetto Cristian 2015-2016 / MIT Licence  */
+/*  AES Counter-mode implementation in JavaScript                                                 */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
-/* jshint node:true *//* global define, escape, unescape, btoa, atob */
+
 'use strict';
 
 
@@ -10,8 +10,7 @@
 /**
  * AesCtrP: Counter-mode (CTR) wrapper for AES with parametric nonce and sequence.
  *
- * This encrypts a Unicode string to produces a base64 ciphertext using 128/192/256-bit AES,
- * and the converse to decrypt an encrypted ciphertext.
+ * This encrypts a Unicode string to produces a base64 ciphertext using 128/192/256-bit AES.
  *
  * See http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf
  *
@@ -47,6 +46,8 @@ AesCtrP.leadingZeros=function( x)
  * @param   {string} plaintext - Source text to be encrypted.
  * @param   {string} password - The password to use to generate a key.
  * @param   {number} nBits - Number of bits to be used in the key; 128 / 192 / 256.
+ * @param   {number} sequence - sequence in the protocol (optional).
+ * @param   {number} nonce - first part of CTR - counter (optional).
  * @returns {string} Encrypted text.
  *
  * @example
@@ -117,6 +118,7 @@ alert(AesCtrP.leadingZeros(1));
  * @param   {string} ciphertext - Source text to be encrypted.
  * @param   {string} password - Password to use to generate a key.
  * @param   {number} nBits - Number of bits to be used in the key; 128 / 192 / 256.
+ * @param   {number} sequence - sequence of protocol
  * @returns {string} Decrypted text
  *
  * @example
