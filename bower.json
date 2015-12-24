@@ -1,0 +1,8 @@
+{
+"name": "aesctrp",
+"version": "0.0.1",
+"main":["aes.js","aes-ctr.js"],
+"ignore": []
+
+}
+
