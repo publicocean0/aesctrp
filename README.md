@@ -5,7 +5,7 @@ It permits to encrypt a packet defined as Buffer Array , evoiding the middle att
 <pre>
 var nonce=10000;
 var sequence=1;
-var buf=AesCtrP.encrypt(AesCtrP.stringArrayBuffer("prova"), AesCtrP.stringArrayBuffer("password"), 256,sequence,nonce)
-var result=AesCtrP.decrypt(buf, AesCtrP.stringArrayBuffer("password"), 256,sequence);
-console.log(AesCtrP.arrayBufferString(result));
+var buf=AesCtrP.encrypt(input, password, 256,sequence,nonce)
+var result=AesCtrP.decrypt(buf, password, 256,sequence);
+console.log(result);
 </pre>
