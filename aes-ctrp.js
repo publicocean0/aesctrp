@@ -111,7 +111,7 @@ AesCtrP.encrypt = function(plaintext, password, nBits,sequence,nonce) {
     return ciphertext;
 }; 
 
-alert(AesCtrP.leadingZeros(1));
+
 /**
  * Decrypt a text encrypted by AES in counter mode of operation
  *
